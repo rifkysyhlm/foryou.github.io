@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.slider {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all 0.3s ease; /* Add smooth transition effect */
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
+#music-toggle {
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #28a745; /* Initial background color */
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+}
+
+/* Button hover effects */
+button:hover {
+    opacity: 1; /* Full opacity when hovered */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow */
+    transform: translateY(-50%) scale(1.1); /* Slightly scale up */
+}
+
+#music-toggle:hover {
+    background-color: #218838; /* Darken the green on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow for music button */
+}
+
+/* Active (clicked) state effect */
+button:active {
+    transform: translateY(-50%) scale(1.05); /* Scale down a bit when clicked */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Less shadow when clicked */
+}
